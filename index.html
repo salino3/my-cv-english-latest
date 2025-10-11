@@ -66,10 +66,10 @@
 
       .root {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
         justify-content: center;
-         gap: var(--spacing_16);
+         gap: var(--spacing_32);
         min-height: 100vh;
        width: 100%;
        box-sizing: border-box;
@@ -79,7 +79,7 @@
         padding-top: 8px;
        }
 
-      .mainContainer {
+      .mainContainer   {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -90,8 +90,73 @@
    
       }
 
+      .leftContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:   center;
+        gap: var(--spacing_16);
+        box-sizing: border-box;
+        height: 100%;
+       
+      }
+
+      .leftContainer header {
+          display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:   center;
+        gap: var(--spacing_2);
+         box-sizing: border-box;
+      }
+
+       .leftContainer header  .titleWeb {
+        font-size: 48px ;
+      }
+
+     .leftContainer header .job-title {
+        color: var(--manfred-dark);
+        font-family: 'Source Serif Pro', sans-serif;
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+      }
+
+       .leftContainer .boxSkills {
+            display: flex;
+            flex-direction: column;
+           width: 100%;
+           padding-left: 8px;
+       }
+
+      .leftContainer .ul__technologies_02, 
+      .leftContainer 
+      .main__section
+      .ul__languages_02
+      {
+                display: flex;
+                flex-direction: column;
+        gap: var(--spacing_32);
+        flex-wrap: wrap;
+       }
+
+     .leftContainer .ul__technologies_02 .li__technologies {
+     font-weight: 600;
+        letter-spacing: 0.75px;
+        display: flex;
+        padding: var(--spacing_8) var(--spacing_12);
+        align-items: center;
+        gap: var(--spacing_8);
+        border-radius: var(--spacing_8);
+        background: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);    
+     
+      }
+
+
       .imgMe {
-        max-width: 300px;
+        max-width: 290px;
       } 
 
       .titleWeb {
@@ -327,7 +392,8 @@
         }
         .languages_098 {
 
-          box-sizing: border-box;min-width: 100%;
+          box-sizing: border-box;
+          min-width: 100%;
 
         }            
 
@@ -457,17 +523,15 @@
   </head>
   <body>
     <div class="root">
-      <div
-      class="mainContainer"
-      >
-
-        <header>
+ <div class="leftContainer">
+      <header>
+             <div class="gradient__background">
+        <h1 class="titleWeb">Flavio Forte</h1>
+      </div>
             <img class="imgMe" src="https://media-asgard.s3.eu-west-1.amazonaws.com/24/01/24/44580391-92c6-453d-af86-d3002439d3c1_mifotocamisaoscura.jpg" />
           <section class="header__content">
               <div class="header__content__name"> 
-      <div class="gradient__background">
-        <h1 class="titleWeb">Flavio Forte</h1>
-      </div>
+  
       <!-- <h2 class="surname">Forte</h2> -->
       <p class="job-title">Software Developer</p>
     </div>
@@ -557,30 +621,111 @@
           </section>
         </header>
         
-        <main>
-            <section class="main__section about-me__section">
-      <div class="main__section__header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
-          <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
-        </svg>
-        <h2>About me</h2>
-      </div>
-      <p>
-      
-        
-I’m a Front-end web developer with 3+ years of experience specializing in React and TypeScript. Skilled in SCSS, React Router. On the back-end I'm skilled in Node.js, Express, and MySQL, I build responsive, accessible apps with clean, maintainable code and efficient front-end/back-end integration.
-  </p>
-    </section>
-  
-            <section class="main__section languages_098">
+  <div class="boxSkills">
+
+    <div class="main__section__header">
+ 
+<h2>Skills</h2>
+</div>
+<ul class="ul__technologies_02">
+          <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+     React
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    Git
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    GraphQL
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    HTML
+  </li>
+     <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    WCAG
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    JavaScript
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    NodeJS
+  </li>
+     <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    SQL
+  </li> 
+            <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    MySQL
+  </li>        </li>
+            <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    PostgreSQL
+  </li>
+          <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    MongoDB
+  </li>
+  <li class="li__technologies">
+    Sequelize
+  </li>
+  <li class="li__technologies">
+
+    TypeScript
+  </li>
+         <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    Bootstrap
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    CSS
+  </li>   
+        <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    SCSS
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    Docker
+  </li>
+  <li class="li__technologies">
+
+    Vue
+  </li>
+</ul>
+  </div>
+
+
+        <section 
+        style="padding-left: 8px;"
+        class="main__section ">
       <div class="main__section__header"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
-          <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
-        </svg>
+  
         <h2>Languages</h2>
       </div>
-      <ul class="ul__languages">
+      <ul class="ul__languages_02">
           <li class="li__languages">English
             <div class="main__lang__level">
                 <svg xmlns="http://www.w3.org/2000/svg" width="137" height="29" viewBox="0 0 137 29" fill="none">
@@ -616,105 +761,35 @@ I’m a Front-end web developer with 3+ years of experience specializing in Reac
           </li>
       </ul>
     </section>
-  
-            <section class="main__section">
+ </div>
+
+ <!--  -->
+      <div
+      class="mainContainer"
+      >
+
+   
+        <main>
+            <section class="main__section about-me__section">
       <div class="main__section__header">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
           <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
         </svg>
-        <h2>Skills</h2>
+        <h2>About me</h2>
       </div>
-      <ul class="ul__technologies">
-                  <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-             React
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Git
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            GraphQL
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            HTML
-          </li>
-             <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            WCAG
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            JavaScript
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            NodeJS
-          </li>
-             <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            SQL
-          </li> 
-                    <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            MySQL
-          </li>        </li>
-                    <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            PostgreSQL
-          </li>
-                  <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            MongoDB
-          </li>
-          <li class="li__technologies">
-            Sequelize
-          </li>
-          <li class="li__technologies">
+      <p>
+      
         
-            TypeScript
-          </li>
-                 <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Bootstrap
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            CSS
-          </li>   
-                <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            SCSS
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Docker
-          </li>
-          <li class="li__technologies">
-   
-            Vue
-          </li>
-      </ul>
+I’m a Front-end web developer with 3+ years of experience specializing in React and TypeScript. Skilled in SCSS, React Router. On the back-end I'm skilled in Node.js, Express, and MySQL, I build responsive, accessible apps with clean, maintainable code and efficient front-end/back-end integration.
+  </p>
+    </section>
+  
+        
+     
  
   
             <section class="main__section"  style="padding-top: 8px;">
-      <div class="main__section__header"
+           <div class="main__section__header"
     
       >
       
