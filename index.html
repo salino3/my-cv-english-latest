@@ -22,6 +22,7 @@
         /* spacing */
         --spacing_base: 4px;
         --spacing_2: calc(var(--spacing_base) / 2);
+        --spacing_6: calc(var(--spacing_base) * 1.5);
         --spacing_8: calc(var(--spacing_base) * 2);
         --spacing_12: calc(var(--spacing_base) * 3);
         --spacing_16: calc(var(--spacing_base) * 4);
@@ -66,19 +67,20 @@
 
       .root {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
         justify-content: center;
-         gap: var(--spacing_16);
+         gap: var(--spacing_32);
         min-height: 100vh;
        width: 100%;
        box-sizing: border-box;
 
         max-width: 1100px;
-        padding: 64px 0;
+        padding:  0;
+        padding-top: 8px;
        }
 
-      .mainContainer {
+      .mainContainer   {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -86,7 +88,83 @@
         gap: var(--spacing_16);
         width: 100%;
         box-sizing: border-box;
-  
+        padding-right: 8px;
+   
+      }
+
+      .leftContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:   center;
+        gap: var(--spacing_16);
+        box-sizing: border-box;
+        height: 100%;
+        border-right: solid 1px #3BA0B7;
+       padding: 0 8px;
+      }
+
+      .leftContainer header {
+          display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:   center;
+        gap: var(--spacing_2);
+         box-sizing: border-box;
+      }
+
+       .leftContainer header  .titleWeb {
+        font-size: 48px ;
+      }
+
+     .leftContainer header .job-title {
+        color: var(--manfred-dark);
+        font-family: 'Source Serif Pro', sans-serif;
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+      }
+
+       .leftContainer .boxSkills {
+            display: flex;
+            flex-direction: column;
+           width: 100%;
+            padding-top: 8px;
+
+       }
+
+      .leftContainer .ul__technologies_02, 
+      .leftContainer 
+      .main__section
+      .ul__languages_02
+      {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing_32);
+        flex-wrap: wrap;
+        }
+
+     .leftContainer .ul__technologies_02 .li__technologies {
+     font-weight: 600;
+        letter-spacing: 0.75px;
+        display: flex;
+        padding: var(--spacing_8) var(--spacing_12);
+        align-items: center;
+        gap: var(--spacing_8);
+        border-radius: var(--spacing_8);
+        background: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);    
+     
+      }
+
+
+      .imgMe {
+        max-width: 290px;
+      } 
+
+      .titleWeb {
+        font-size: 60px ;
       }
       main,header {
         display: flex;
@@ -195,7 +273,7 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        gap: var(--spacing_24);
+        gap: 8px;
       }
 
       .header__content__name {
@@ -234,7 +312,7 @@
       .header__content__links {
         display: flex;
         align-items: center;
-        gap: var(--spacing_32);
+        gap: var(--spacing_24);
         padding-left: var(--spacing_8);
       }
 
@@ -266,11 +344,11 @@
       /* main section styles */
       main {
         display: flex;
-        padding: var(--spacing_32) 0px;
+        padding: var(--spacing_24) 0px;
          justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: var(--spacing_64);
+        gap: 16px;
         box-sizing: border-box;
         max-width: 90vw;
       }
@@ -279,7 +357,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--spacing_32);
+        gap: var(--spacing_6);
       }
 
       .main__section > p {
@@ -296,9 +374,21 @@
         gap: var(--spacing_16);
         width: 100%;
         box-sizing: border-box;
-        padding-bottom: var(--spacing_32);
+        padding-bottom: var(--spacing_24);
         border-bottom: 1px solid rgba(94, 202, 191, 0.3);
       }
+
+      .main__section__item_02 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: var(--spacing_16);
+        width: 100%;
+        box-sizing: border-box;
+        padding-bottom: var(--spacing_24);
+       }
+ 
 
       .main__section__header {
         display: flex;
@@ -307,7 +397,8 @@
         }
         .languages_098 {
 
-          box-sizing: border-box;min-width: 100%;
+          box-sizing: border-box;
+          min-width: 100%;
 
         }            
 
@@ -331,9 +422,8 @@
         border-radius: var(--spacing_8);
         background: #fff;
         box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);
-        width: 100%;
-        min-width: 300px;
-      }
+         max-width: 280px;
+       }
 
       @media (min-width: 728px) {
         .ul__languages {
@@ -341,7 +431,8 @@
           flex-wrap: wrap;
         }
         .li__languages {
-          width: 300px;
+          min-width: 280px;
+          max-height: 60px;
         }
       }
 
@@ -436,18 +527,16 @@
   </head>
   <body>
     <div class="root">
-      <div
-      class="mainContainer"
-      >
-
-        <header>
-            <img src="https://media-asgard.s3.eu-west-1.amazonaws.com/24/01/24/44580391-92c6-453d-af86-d3002439d3c1_mifotocamisaoscura.jpg" />
+ <div class="leftContainer">
+      <header>
+             <div class="gradient__background">
+        <h1 class="titleWeb">Flavio Forte</h1>
+      </div>
+            <img class="imgMe" src="https://media-asgard.s3.eu-west-1.amazonaws.com/24/01/24/44580391-92c6-453d-af86-d3002439d3c1_mifotocamisaoscura.jpg" />
           <section class="header__content">
               <div class="header__content__name"> 
-      <div class="gradient__background">
-        <h1>Flavio </h1>
-      </div>
-      <h2 class="surname">Forte</h2>
+  
+      <!-- <h2 class="surname">Forte</h2> -->
       <p class="job-title">Software Developer</p>
     </div>
       <div class="header__content__address">
@@ -464,7 +553,7 @@
             </clipPath>
           </defs>
         </svg>
-        <p>Bucharest, Romania</p>
+        <span  style="color: #3BA0B7;font-weight: 600;" >&nbsp;Bucharest, Romania </span>
       </div>
         <div class="aside__section__item" style="position: relative;display: flex; flex-direction: row; align-items: center;">
            <a style="position: relative;left: 6px;" class="links__item" href="mailto:flaviofortedev@gmail.com" target="_blank">
@@ -475,6 +564,16 @@
                       </svg>
                   <span style="position: relative; bottom: 6px;">&nbsp;flaviofortedev@gmail.com</span></a>
           </div>
+              <!--  -->
+           <div style="position: relative;display: flex; flex-direction: row; align-items: center;" class="header__content__links">
+
+             <a href="tel:+34666873670" target="_blank">
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#3BA0B7" stroke="#3BA0B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone">
+    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+    <rect x="7" y="5" width="10" height="12" fill="white" stroke="none"></rect> <line x1="12" y1="19" x2="12.01" y2="19" stroke="#3BA0B7"></line> </svg>
+      <span style="position: relative; bottom: 6px;">&nbsp;+34 666 87 36 70</span></a>    
+  </a>
+            </div>
                 <div class="header__content__links">
                   <a href=https://www.linkedin.com/in/flavio-forte-/ target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -520,73 +619,20 @@
           <span style="position: relative; bottom: 6px;">salino3.github.io/my-portfolio</span>
         </a>
       </div>
-      <div style="position: relative;display: flex; flex-direction: row; align-items: center;" class="header__content__links">
-        <a href=https://e-commerce-lemoncode.vercel.app/ target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
-            <path
-            d="M21.742 10.4387C23.8608 8.31996 23.8608 4.88871 21.742 2.76996C19.867 0.89496 16.912 0.65121 14.7558 2.19246L14.6958 2.23371C14.1558 2.61996 14.032 3.36996 14.4183 3.90621C14.8045 4.44246 15.5545 4.56996 16.0908 4.18371L16.1508 4.14246C17.3545 3.28371 19.0008 3.41871 20.0433 4.46496C21.2245 5.64621 21.2245 7.55871 20.0433 8.73996L15.8358 12.955C14.6545 14.1362 12.742 14.1362 11.5608 12.955C10.5145 11.9087 10.3795 10.2625 11.2383 9.06246L11.2795 9.00246C11.6658 8.46246 11.5383 7.71246 11.002 7.32996C10.4658 6.94746 9.71203 7.07121 9.32953 7.60746L9.28828 7.66746C7.74328 9.81996 7.98703 12.775 9.86203 14.65C11.9808 16.7687 15.412 16.7687 17.5308 14.65L21.742 10.4387ZM2.25703 9.56121C0.138281 11.68 0.138281 15.1112 2.25703 17.23C4.13203 19.105 7.08703 19.3487 9.24328 17.8075L9.30328 17.7662C9.84328 17.38 9.96703 16.63 9.58078 16.0937C9.19453 15.5575 8.44453 15.43 7.90828 15.8162L7.84828 15.8575C6.64453 16.7162 4.99828 16.5812 3.95578 15.535C2.77453 14.35 2.77453 12.4375 3.95578 11.2562L8.16328 7.04496C9.34453 5.86371 11.257 5.86371 12.4383 7.04496C13.4845 8.09121 13.6195 9.73746 12.7608 10.9412L12.7195 11.0012C12.3333 11.5412 12.4608 12.2912 12.997 12.6737C13.5333 13.0562 14.287 12.9325 14.6695 12.3962L14.7108 12.3362C16.2558 10.18 16.012 7.22496 14.137 5.34996C12.0183 3.23121 8.58703 3.23121 6.46828 5.34996L2.25703 9.56121Z"
-            fill="#3BA0B7"
-            />
-          </svg>
-               <span style="position: relative; bottom: 6px;">e-commerce-lemoncode.vercel.app</span>
-        </a>
-      </div>
-      <div style="position: relative;display: flex; flex-direction: row; align-items: center;" class="header__content__links">
-        <a href=https://databay.solutions target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
-            <path
-            d="M21.742 10.4387C23.8608 8.31996 23.8608 4.88871 21.742 2.76996C19.867 0.89496 16.912 0.65121 14.7558 2.19246L14.6958 2.23371C14.1558 2.61996 14.032 3.36996 14.4183 3.90621C14.8045 4.44246 15.5545 4.56996 16.0908 4.18371L16.1508 4.14246C17.3545 3.28371 19.0008 3.41871 20.0433 4.46496C21.2245 5.64621 21.2245 7.55871 20.0433 8.73996L15.8358 12.955C14.6545 14.1362 12.742 14.1362 11.5608 12.955C10.5145 11.9087 10.3795 10.2625 11.2383 9.06246L11.2795 9.00246C11.6658 8.46246 11.5383 7.71246 11.002 7.32996C10.4658 6.94746 9.71203 7.07121 9.32953 7.60746L9.28828 7.66746C7.74328 9.81996 7.98703 12.775 9.86203 14.65C11.9808 16.7687 15.412 16.7687 17.5308 14.65L21.742 10.4387ZM2.25703 9.56121C0.138281 11.68 0.138281 15.1112 2.25703 17.23C4.13203 19.105 7.08703 19.3487 9.24328 17.8075L9.30328 17.7662C9.84328 17.38 9.96703 16.63 9.58078 16.0937C9.19453 15.5575 8.44453 15.43 7.90828 15.8162L7.84828 15.8575C6.64453 16.7162 4.99828 16.5812 3.95578 15.535C2.77453 14.35 2.77453 12.4375 3.95578 11.2562L8.16328 7.04496C9.34453 5.86371 11.257 5.86371 12.4383 7.04496C13.4845 8.09121 13.6195 9.73746 12.7608 10.9412L12.7195 11.0012C12.3333 11.5412 12.4608 12.2912 12.997 12.6737C13.5333 13.0562 14.287 12.9325 14.6695 12.3962L14.7108 12.3362C16.2558 10.18 16.012 7.22496 14.137 5.34996C12.0183 3.23121 8.58703 3.23121 6.46828 5.34996L2.25703 9.56121Z"
-            fill="#3BA0B7"
-            />
-          </svg>
-       <span style="position: relative; bottom: 6px;">databay.solutions</span>
-        </a>
-      </div>
-      <div style="position: relative;display: flex; flex-direction: row; align-items: center;" class="header__content__links">
-          <a href=https://manfredexport.com/ target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
-              <path
-                d="M21.742 10.4387C23.8608 8.31996 23.8608 4.88871 21.742 2.76996C19.867 0.89496 16.912 0.65121 14.7558 2.19246L14.6958 2.23371C14.1558 2.61996 14.032 3.36996 14.4183 3.90621C14.8045 4.44246 15.5545 4.56996 16.0908 4.18371L16.1508 4.14246C17.3545 3.28371 19.0008 3.41871 20.0433 4.46496C21.2245 5.64621 21.2245 7.55871 20.0433 8.73996L15.8358 12.955C14.6545 14.1362 12.742 14.1362 11.5608 12.955C10.5145 11.9087 10.3795 10.2625 11.2383 9.06246L11.2795 9.00246C11.6658 8.46246 11.5383 7.71246 11.002 7.32996C10.4658 6.94746 9.71203 7.07121 9.32953 7.60746L9.28828 7.66746C7.74328 9.81996 7.98703 12.775 9.86203 14.65C11.9808 16.7687 15.412 16.7687 17.5308 14.65L21.742 10.4387ZM2.25703 9.56121C0.138281 11.68 0.138281 15.1112 2.25703 17.23C4.13203 19.105 7.08703 19.3487 9.24328 17.8075L9.30328 17.7662C9.84328 17.38 9.96703 16.63 9.58078 16.0937C9.19453 15.5575 8.44453 15.43 7.90828 15.8162L7.84828 15.8575C6.64453 16.7162 4.99828 16.5812 3.95578 15.535C2.77453 14.35 2.77453 12.4375 3.95578 11.2562L8.16328 7.04496C9.34453 5.86371 11.257 5.86371 12.4383 7.04496C13.4845 8.09121 13.6195 9.73746 12.7608 10.9412L12.7195 11.0012C12.3333 11.5412 12.4608 12.2912 12.997 12.6737C13.5333 13.0562 14.287 12.9325 14.6695 12.3962L14.7108 12.3362C16.2558 10.18 16.012 7.22496 14.137 5.34996C12.0183 3.23121 8.58703 3.23121 6.46828 5.34996L2.25703 9.56121Z"
-                fill="#3BA0B7"
-              />
-            </svg>
-            <span style="position: relative; bottom: 6px;">manfredexport.com</span>
-          </a>
-    </div>
+    
+ 
+ 
           </section>
         </header>
-        
-        <main>
-            <section class="main__section about-me__section">
-      <div class="main__section__header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
-          <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
-        </svg>
-        <h2>About me</h2>
-      </div>
-      <p>
-        I have over three years of experience working as a web developer, specializing in React and
-TypeScript. I build dynamic, responsive applications, create custom components with WCAG
-accessibility, manage complex state with Context API, and integrate APIs efficiently. I am
-skilled in HTML, CSS, SCSS, React Router DOM, etc, and performance optimization, with
-experience on Vanilla JS too. On the back end, I have experience with Node.js, Express, and
-MySQL, designing relational databases and building APIs with authentication (JWT, cookies).
-While MySQL is my
-primary database, I have also worked with MongoDB. I focus on writing clean,
-maintainable code and integrating front-end and back-end systems effectively.
 
-  </p>
-    </section>
-  
-            <section class="main__section languages_098">
+                <section 
+         class="main__section">
       <div class="main__section__header"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
-          <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
-        </svg>
+  
         <h2>Languages</h2>
       </div>
-      <ul class="ul__languages">
+      <ul class="ul__languages_02">
           <li class="li__languages">English
             <div class="main__lang__level">
                 <svg xmlns="http://www.w3.org/2000/svg" width="137" height="29" viewBox="0 0 137 29" fill="none">
@@ -622,121 +668,146 @@ maintainable code and integrating front-end and back-end systems effectively.
           </li>
       </ul>
     </section>
-  
-            <section class="main__section">
-      <div class="main__section__header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
-          <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
-        </svg>
-        <h2>Skills</h2>
-      </div>
-      <ul class="ul__technologies">
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            AngularJS
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Bootstrap
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            CSS
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Docker
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Git
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Github
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            Github Actions
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            GraphQL
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            HTML
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            JavaScript
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            MongoDB
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-            <!-- <img class="technologie__icon--gray-scale" src=""> -->
-            NodeJS
-          </li>
-          <li class="li__technologies">
-            <!-- We need to know if we can get the technology images -->
-             React
-          </li>
-          <li class="li__technologies">
-             
-            Sequelize
-          </li>
-          <li class="li__technologies">
         
-            TypeScript
-          </li>
+  <div class="boxSkills">
+
+    <div class="main__section__header">
+ 
+<h2>Skills</h2>
+</div>
+<ul class="ul__technologies_02">
           <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+     React
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    NodeJS
+  </li>
+    <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    JavaScript
+  </li>
+    <li class="li__technologies">
+
+    TypeScript
+  </li>
+       <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    WCAG
+  </li>
+     <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    SQL
+  </li> 
+            <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    MySQL
+  </li>        </li>
+            <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    PostgreSQL
+  </li>
+          <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    MongoDB
+  </li>
+  <li class="li__technologies">
+    Sequelize
+  </li>
+ 
+         <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    Bootstrap
+  </li>
+    <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    Git
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    GraphQL
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    HTML
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    CSS
+  </li>   
+        <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    SCSS
+  </li>
+  <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    Docker
+  </li>
+  <li class="li__technologies">
+
+    Vue
+  </li>
+</ul>
+  </div>
+
+
+ 
+ </div>
+
+ <!--  -->
+      <div
+      class="mainContainer"
+      >
+
    
-            Vue
-          </li>
-      </ul>
-    </section>
-  
-            <section class="main__section"
-            style="box-sizing: border-box;min-width: 100%;"
-            >
+        <main>
+            <section class="main__section about-me__section">
       <div class="main__section__header">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
           <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
         </svg>
-        <h2>Competencies</h2>
+        <h2>About me</h2>
       </div>
-      <ul class="main__section__skills__ul">
-          <li class="main__section__skills__li">Continuous learning</li>
-          <li class="main__section__skills__li">Written communication</li>
-          <li class="main__section__skills__li">Creative thinking</li>
-      </ul>
+      <p>
+      
+        
+I’m a Front-end web developer with 3+ years of experience specializing in React and TypeScript. Skilled in SCSS, React Router. On the back-end I'm skilled in Node.js, Express, and MySQL, I build responsive, accessible apps with clean, maintainable code and efficient front-end/back-end integration.
+  </p>
     </section>
   
-            <section class="main__section">
-      <div class="main__section__header">
+        
+     
+ 
+  
+            <section class="main__section"  style="padding-top: 8px;">
+           <div class="main__section__header"
+    
+      >
+      
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
           <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
         </svg>
+       
         <h2>Experience / Career</h2>
       </div>
       <section class="main__section__item">
-        <h3>Saurus</h3>
-        <h4>Front-end</h4>
-        <div class="section__content__date">
+        <h3> <a href="https://saurus.com" target="_blank">Saurus</a> - Front-end</h3>
+         <div class="section__content__date">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path
               opacity="0.75"
@@ -752,28 +823,14 @@ maintainable code and integrating front-end and back-end systems effectively.
         <div class="main__section__data">
             <ul>
                 <li>
-      I have the role of Front-end developer, working on several projects using diferents technologies. On the client side, implemented dynamic and efficient interfaces using, JavaScript and React for frontend logic. For the layout and styles, I used CSS, SCSS and the Material UI library, providing an attractive visual experience.
-     I designing web interfaces from zero with multiple pages using React Router DOM. My proficiency extends to optimizing performance, implementing best practices, and build maintainable code
-      I worked in collaboration with the development team.
-   </li>
-            </ul>
-        </div>
-          <a href="https://saurus.com" target="_blank">Saurus</a>
-          <h3 class="tech__tools__heading">Technologies and Tools</h3>
-          <ul class="ul__technologies">
-            <li class="li__technologies">React</li>
-            <li class="li__technologies">CSS</li>
-            <li class="li__technologies">HTML</li>
-              <li class="li__technologies">JavaScript</li>
-              <li class="li__technologies">MySQL</li>
-              <li class="li__technologies">TypeScript</li>
-              <li class="li__technologies">VanillaJS</li>
-          </ul>
+     
+                  
+I work as Front-end Developer focused on creating dynamic, efficient, and user-friendly interfaces. I design multi-page web interfaces from scratch, ensuring performance, best practices, and clean, maintainable code while collaborating with the team to deliver high-quality results.   </li>
+    
       </section>
         <section class="main__section__item">
-          <h3>Databay Solution</h3>
-          <h4>Full stack</h4>
-          <div class="section__content__date">
+          <h3>    <a href="https://databay.solutions" target="_blank">Databay Solution</a> - Full stack</h3>
+           <div class="section__content__date">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 opacity="0.75"
@@ -786,42 +843,19 @@ maintainable code and integrating front-end and back-end systems effectively.
             </svg>
             <p>jul 2023            - jan 2024          </p>
           </div>
+      
           <div class="main__section__data">
               <ul>
                   <li>
-        I had the role of Full Stack developer, working on several projects using a wide range of technologies. On the client side, implemented dynamic and efficient interfaces using Vue and Nuxt, JavaScript and TypeScript for frontend logic. For the layout and styles, I used CSS and the Ant Design (AntD) component library, providing an attractive visual experience.
-  On the server side, I built services with Node.js, using the Sequelize framework to interact with MySQL databases. This integration ensured efficient data management and a scalable architecture. I worked in collaboration with the development team.
-     </li>
-              </ul>
-          </div>
-            <a href="https://databay.solutions" target="_blank">Databay Solution</a>
-            <h3 class="tech__tools__heading">Technologies and Tools</h3>
-            <ul class="ul__technologies">
-              <li class="li__technologies">React</li>
-              <li class="li__technologies">CSS</li>
-              <li class="li__technologies">HTML</li>
-                <li class="li__technologies">JavaScript</li>
-                <li class="li__technologies">MySQL</li>
-                <li class="li__technologies">NodeJS</li>
-                <li class="li__technologies">Nuxt.js</li>
-                <li class="li__technologies">Sequelize</li>
-                <li class="li__technologies">TypeScript</li>
-                <li class="li__technologies">VanillaJS</li>
-                <li class="li__technologies">Vue</li>
-            </ul>
-            <div style="display: flex;flex-wrap: wrap;gap: 12px;margin-top: 12px;">
-              <div style="border: solid gray 1px;">
-                <img src="./img/screen-shot-1.png" style="min-width:300px;width: 100%;box-sizing: border-box; max-width:400px" alt="screen shot">
-              </div>
-              <div style="border: solid gray 1px;">
-                <img src="./img/screen-shot-2.png" style="min-width:300px;width: 100%;box-sizing: border-box; max-width:400px" alt="screen shot">
-              </div>
-            </div>
+        I worked as a Full Stack Developer on several projects, creating dynamic and efficient interfaces with a strong focus on performance and user experience. I developed and integrated server-side services to ensure efficient data management and a scalable architecture, collaborating closely with the development team to deliver high-quality solutions.
+
+</li>
+</div>
+ 
         </section>
         <section class="main__section__item">
-          <h3>Lemoncode</h3>
-          <h4>Front-end</h4>
-          <div class="section__content__date">
+          <h3>      <a href="https://www.manfredexport.com/" target="_blank">Lemoncode</a> - Front-end</h3>
+           <div class="section__content__date">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 opacity="0.75"
@@ -837,28 +871,17 @@ maintainable code and integrating front-end and back-end systems effectively.
           <div class="main__section__data">
               <ul>
                   <li>
-      Developed practical frontend skills by creating complete web pages using the React framework. During these internships, I implemented the Emotion layout library to achieve an efficient and scalable design. This approach allowed me to build modern web interfaces, optimizing the user experience and applying best practices in frontend development with React and Emotion.
+
+Developed strong frontend skills by building complete web pages and modern interfaces focused on efficiency and scalability. This experience allowed me to optimize user experience and apply best practices in frontend development.
                   </li>
               </ul>
           </div>
-            <a href="https://www.manfredexport.com/" target="_blank">Lemoncode</a>
-            <h3 class="tech__tools__heading">Technologies and Tools</h3>
-            <ul class="ul__technologies">
-                <li class="li__technologies">CSS</li>
-                <li class="li__technologies">HTML</li>
-                <li class="li__technologies">JavaScript</li>
-                <li class="li__technologies">React</li>
-                <li class="li__technologies">TypeScript</li>
-            </ul>
-                      <div style="display: flex;flex-wrap: wrap;gap: 12px;margin-top: 12px;">
-                        <img src="./img/screen-shot-3.png" style="min-width:300px;width: 100%;box-sizing: border-box; max-width:400px" alt="screen shot">
-                        <img src="./img/screen-shot-4.png" style="min-width:300px;width: 100%;box-sizing: border-box; max-width:400px" alt="screen shot">
-                      </div>
-  
+       
+ 
         </section>
     </section>
   
-            <section class="main__section">
+            <section class="main__section"   style="padding-top: 8px;">
       <div class="main__section__header">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
           <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
@@ -866,9 +889,8 @@ maintainable code and integrating front-end and back-end systems effectively.
         <h2>Studies</h2>
       </div>
         <section class="main__section__item">
-          <h3>Bootcamp Backend</h3>
-            <h4>Lemoncode</h4>
-          <div class="section__content__date">
+          <h3>Lemoncode - Bootcamp Backend</h3>
+           <div class="section__content__date">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 opacity="0.75"
@@ -888,16 +910,7 @@ maintainable code and integrating front-end and back-end systems effectively.
   In this Bootcamp I will cover cloud technologies and providers such as: NodeJS, Express, Mongoose, Mongo, GraphQL, .net, Entity Framework, SQL Server, TypeScript, C#, Heroku, Amazon, Azure
             </p>    
               </div>
-            <h3 class="tech__tools__heading">Technologies and Tools</h3>
-            <ul class="ul__technologies">
-                <li class="li__technologies">Azure</li>
-                <li class="li__technologies">GraphQL</li>
-                <li class="li__technologies">Microsoft SQL Integration Services (SSIS)</li>
-                <li class="li__technologies">MongoDB</li>
-                <li class="li__technologies">Mongoose</li>
-                <li class="li__technologies">NodeJS</li>
-                <li class="li__technologies">TypeScript</li>
-            </ul>
+ 
         </section>
   
         <!-- <section class="main__section__item">
@@ -928,9 +941,8 @@ maintainable code and integrating front-end and back-end systems effectively.
         </section> -->
   
         <section class="main__section__item">
-          <h3>Master Front-end</h3>
-            <h4>Lemoncode</h4>
-          <div class="section__content__date">
+          <h3>Lemoncode - Master Front-end</h3>
+           <div class="section__content__date">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 opacity="0.75"
@@ -949,20 +961,7 @@ maintainable code and integrating front-end and back-end systems effectively.
   Lemoncode Front-end Master in frontend development, where I acquired solid skills in HTML, CSS, JavaScript, Angular and React. I experimented with projects from the working world, thoroughly explored popular frameworks such as Angular and React, developing my skills in creating modern and highly interactive web applications.
             </p>
           </div>
-            <h3 class="tech__tools__heading">Technologies and Tools</h3>
-            <ul class="ul__technologies">
-                <li class="li__technologies">AngularJS</li>
-                <li class="li__technologies">CSS</li>
-                <li class="li__technologies">Docker</li>
-                <li class="li__technologies">HTML</li>
-                <li class="li__technologies">JavaScript</li>
-                <li class="li__technologies">MongoDB</li>
-                <li class="li__technologies">MySQL</li>
-                <li class="li__technologies">React</li>
-                <li class="li__technologies">Scss</li>
-                <li class="li__technologies">TypeScript</li>
-                <li class="li__technologies">Vue</li>
-            </ul>
+       
         </section>
   
         <!-- <section class="main__section__item">
@@ -1027,10 +1026,9 @@ maintainable code and integrating front-end and back-end systems effectively.
             </ul>
         </section> -->
   
-        <section class="main__section__item">
-          <h3>Bootcamp</h3>
-            <h4>Pixelpro</h4>
-          <div class="section__content__date">
+        <section class="main__section__item_02">
+          <h3>Pixelpro - Bootcamp</h3>
+           <div class="section__content__date">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 opacity="0.75"
@@ -1046,22 +1044,11 @@ maintainable code and integrating front-end and back-end systems effectively.
           </div>
           <div class="main__section__data">
             <p>
-  I successfully participated in the Pixelpro bootcamp, focused on frontend and backend development. Throughout the program, I honed my skills in HTML, CSS, JavaScript, and explored the Node.js environment to build complete web applications. This bootcamp provided me with a comprehensive understanding of development, allowing me to create projects from the front-end to the backend, thus preparing me to face challenges and contribute effectively to end-to-end web projects.
+
+I completed the Pixelpro bootcamp focused on full-stack development, strengthening my skills building web applications. This experience gave me solid understanding of end-to-end development contributing effectively to web projects.
             </p>
           </div>
-            <h3 class="tech__tools__heading">Technologies and Tools</h3>
-            <ul class="ul__technologies">
-                <li class="li__technologies">AngularJS</li>
-                <li class="li__technologies">CSS</li>
-                <li class="li__technologies">HTML</li>
-                <li class="li__technologies">JavaScript</li>
-                <li class="li__technologies">MongoDB</li>
-                <li class="li__technologies">NodeJS</li>
-                <li class="li__technologies">React</li>
-                <li class="li__technologies">Scss</li>
-                <li class="li__technologies">TypeScript</li>
-                <li class="li__technologies">Vue</li>
-            </ul>
+    
         </section>
   
     </section>
