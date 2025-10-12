@@ -22,6 +22,7 @@
         /* spacing */
         --spacing_base: 4px;
         --spacing_2: calc(var(--spacing_base) / 2);
+        --spacing_6: calc(var(--spacing_base) * 1.5);
         --spacing_8: calc(var(--spacing_base) * 2);
         --spacing_12: calc(var(--spacing_base) * 3);
         --spacing_16: calc(var(--spacing_base) * 4);
@@ -99,7 +100,8 @@
         gap: var(--spacing_16);
         box-sizing: border-box;
         height: 100%;
-       
+        border-right: solid 1px #3BA0B7;
+       padding: 0 8px;
       }
 
       .leftContainer header {
@@ -128,8 +130,8 @@
             display: flex;
             flex-direction: column;
            width: 100%;
-           padding-left: 8px;
-           padding-top: 8px;
+            padding-top: 8px;
+
        }
 
       .leftContainer .ul__technologies_02, 
@@ -137,11 +139,11 @@
       .main__section
       .ul__languages_02
       {
-                display: flex;
-                flex-direction: column;
+        display: flex;
+        flex-direction: column;
         gap: var(--spacing_32);
         flex-wrap: wrap;
-       }
+        }
 
      .leftContainer .ul__technologies_02 .li__technologies {
      font-weight: 600;
@@ -355,7 +357,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--spacing_24);
+        gap: var(--spacing_6);
       }
 
       .main__section > p {
@@ -386,6 +388,7 @@
         box-sizing: border-box;
         padding-bottom: var(--spacing_24);
        }
+ 
 
       .main__section__header {
         display: flex;
@@ -419,9 +422,8 @@
         border-radius: var(--spacing_8);
         background: #fff;
         box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);
-        width: 100%;
-        min-width: 300px;
-      }
+         max-width: 280px;
+       }
 
       @media (min-width: 728px) {
         .ul__languages {
@@ -429,7 +431,7 @@
           flex-wrap: wrap;
         }
         .li__languages {
-          width: 300px;
+          min-width: 280px;
           max-height: 60px;
         }
       }
@@ -624,8 +626,7 @@
         </header>
 
                 <section 
-        style="padding-left: 8px;"
-        class="main__section ">
+         class="main__section">
       <div class="main__section__header"
       >
   
@@ -679,16 +680,15 @@
     <!-- We need to know if we can get the technology images -->
      React
   </li>
-
-  <li class="li__technologies">
-    <!-- We need to know if we can get the technology images -->
-    <!-- <img class="technologie__icon--gray-scale" src=""> -->
-    JavaScript
-  </li>
   <li class="li__technologies">
     <!-- We need to know if we can get the technology images -->
     <!-- <img class="technologie__icon--gray-scale" src=""> -->
     NodeJS
+  </li>
+    <li class="li__technologies">
+    <!-- We need to know if we can get the technology images -->
+    <!-- <img class="technologie__icon--gray-scale" src=""> -->
+    JavaScript
   </li>
     <li class="li__technologies">
 
